@@ -2,41 +2,41 @@ package br.com.senai.pessoa;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class ProgramaPrincipal {
-	public static void main(String[] args) {
 
+	public static void main(String[] args) {
 		List<Pessoa> pessoas = new ArrayList<>();
-		PessoaController pessoacontroller = new PessoaController();
+
+		PessoaController pessoaController = new PessoaController();
 
 		boolean sair = false;
 
-		do {
-			pessoacontroller.menu();
+		do{
+			pessoaController.menu();
 
-			int opcao = pessoacontroller.leOpcao();
+			int opcao = pessoaController.leOpcao();
 
-			switch (opcao) {
-			case 1:
-				pessoas.add(pessoacontroller.cadastrarPessoa());
-				break;
+			switch(opcao){
+				case 1:
+					pessoas.add(pessoaController.cadastrarPessoa());
+					break;
 
-			case 2:
-				pessoacontroller.listarPessoas(pessoas);
-				break;
-				
-			case 9:
-				sair = true;
-				break;
+				case 2:
+					pessoaController.listarPessoas(pessoas);
+					break;
 
-			default:
-				System.out.println("OpÁ„o inv·lida");
-				break;
+				case 9:
+					sair = true;
+					break;
+
+				default:
+					System.out.println("Op√ß√£o inv√°lida!");
+					break;
 			}
-		} while (!sair);
+		}while(!sair);
 
-		System.out.println("Sistema finalizado");
-
+		System.out.println("Sistema finalizado!");
 	}
+
 }
