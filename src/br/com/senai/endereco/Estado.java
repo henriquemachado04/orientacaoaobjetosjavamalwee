@@ -1,10 +1,12 @@
-package br.com.senai.pessoa;
+package br.com.senai.endereco;
 
 public class Estado extends País {
 
    
 		// ATRIBUTOS
 		private String NomeDoEstado;
+		private String SiglaDoEstado;
+		
 		public String getNomeDoEstado() {
 			return NomeDoEstado;
 		}
@@ -17,6 +19,5 @@ public class Estado extends País {
 		public void setSiglaDoEstado(String siglaDoEstado) {
 			SiglaDoEstado = siglaDoEstado;
 		}
-		private String SiglaDoEstado;
 	
 }
