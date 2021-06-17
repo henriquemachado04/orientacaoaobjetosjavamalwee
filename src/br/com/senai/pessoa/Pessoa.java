@@ -2,6 +2,8 @@ package br.com.senai.pessoa;
 
 import java.util.Calendar;
 
+import br.com.senai.endereco.Endereco;
+
 //CLASSE
 public class Pessoa extends Endereco {
 
@@ -44,6 +46,11 @@ public class Pessoa extends Endereco {
 
 	public void setAltura(double altura) {
 		this.altura = altura;
+	}
+
+	public void setEndereco(String nextLine) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

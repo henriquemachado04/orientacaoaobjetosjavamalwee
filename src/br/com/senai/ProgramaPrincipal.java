@@ -35,13 +35,22 @@ public class ProgramaPrincipal {
 				case 3:
 				
 				produtos.add(produtoController.cadastrarProduto());
-
+					break;
+					
+				case 4:
+					produtoController.listarProdutos(produtos);
+					break;
+				
+				case 5:
+					produtoController.editarProduto(produtos);
+					break;
+					
 				case 9:
 					sair = true;
 					break;
 
 				default:
-					System.out.println("Opção Inválida!");
+					System.out.println("Opção Inválida!");                                                                                                                                                                                                                                                                                                                                                              
 					break;
 			}
 		}while(!sair);

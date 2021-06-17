@@ -17,11 +17,9 @@ public class PessoaController {
 	}
 
 	public void menu(){
-		System.out.println("\n--- MENU ---");
-		System.out.println("1) Cadastrar pessoa");
-		System.out.println("2) Listar pessoas cadastradas");
-		System.out.println("9) Sair do sistema");
-		System.out.println("-------------------");
+		System.out.println("\n---------------- MENU ---------------");
+		System.out.println("|1 -> Cadastrar pessoa              |");
+		System.out.println("|2 -> Listar pessoas cadastradas    |");
 	}
 
 	public Pessoa cadastrarPessoa(){
@@ -38,13 +36,13 @@ public class PessoaController {
 		System.out.print("Informe a altura: ");
 		pessoa.setAltura(tec.nextDouble());
 		
-		System.out.println("Informe o Endereço: ");
-		tec.nextLine();
-		pessoa.setEndereco(tec.nextLine());
-		
+		System.out.println("Informe seu Pais: ");
+		pessoa.setNomeDoPais(tec.nextLine());
+		tec.next();
 		System.out.print("Informe o nome do seu Estado: ");
 		pessoa.setNomeDoEstado(tec.nextLine());
-		
+		tec.nextLine();
+
 		System.out.print("Informe a sigla do seu Estado: ");
 		pessoa.setSiglaDoEstado(tec.nextLine());
 		
@@ -62,7 +60,7 @@ public class PessoaController {
 		
 		System.out.print("Informe o Complemento: ");
 		pessoa.setComplemento(tec.nextLine());
-
+		tec.nextLine();
 		return pessoa;
 		
 	}
