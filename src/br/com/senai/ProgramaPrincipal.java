@@ -13,6 +13,14 @@ public class ProgramaPrincipal {
 	public static void main(String[] args) {
 		List<Pessoa> pessoas = new ArrayList<>();
 		List<Produto>produtos = new ArrayList<>();
+		
+		Produto produto = new Produto(
+				"Abacate",
+				1.5,
+				35,
+				2.5 * 35
+				);
+		produtos.add(produto);
 
 		PessoaController pessoaController = new PessoaController();
 		ProdutoController produtoController = new ProdutoController();
@@ -25,24 +33,34 @@ public class ProgramaPrincipal {
 			int opcao = pessoaController.leOpcao();
 			switch(opcao){
 				case 1:
-					pessoas.add(pessoaController.cadastrarPessoa());
+					boolean add = pessoas.add(pessoaController.cadastrarPessoa());
 					break;
 
 				case 2:
 					pessoaController.listarPessoas(pessoas);
 					break;
-				
+					
 				case 3:
+					pessoaController.editarPessoa(pessoas);
+					break;
+				case 4:
+					pessoaController.excluirPessoa(pessoas);
+					break;
+				case 5:
 				
 				produtos.add(produtoController.cadastrarProduto());
 					break;
 					
-				case 4:
+				case 6:
 					produtoController.listarProdutos(produtos);
 					break;
 				
-				case 5:
+				case 7:
 					produtoController.editarProduto(produtos);
+					break;
+				
+				case 8:
+					produtoController.excluirProduto(produtos);
 					break;
 					
 				case 9:

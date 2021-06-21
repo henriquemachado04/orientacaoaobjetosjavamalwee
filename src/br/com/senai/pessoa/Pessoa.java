@@ -13,44 +13,30 @@ public class Pessoa extends Endereco {
 	private int idade;
 	private double altura;
 
-	// METODOS
 	public String getNome() {
 		return nome;
 	}
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
 	public int getAnoDeNascimento() {
 		return anoDeNascimento;
 	}
-
 	public void setAnoDeNascimento(int anoDeNascimento) {
 		this.anoDeNascimento = anoDeNascimento;
 	}
-
 	public int getIdade() {
 		return idade;
 	}
-
-	private void setIdade() {
-		Calendar calendar = Calendar.getInstance();
-
-		this.idade = calendar.get(Calendar.YEAR) - getAnoDeNascimento();
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
-
 	public double getAltura() {
 		return altura;
 	}
-
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
-
-	public void setEndereco(String nextLine) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
+
+	
